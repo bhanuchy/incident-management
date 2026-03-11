@@ -1,1 +1,16 @@
+general:
+  buildTool: "custom"
 
+stages:
+  Upload:
+    integrationArtifactUpload:
+      packageId: "TestPackage"
+      integrationFlowId: "EDI_850_ROUTE_-_SEDI_SFTP_X12_850_SENDER_0219"
+      integrationFlowName: "EDI 850 ROUTE - SEDI SFTP X12 850 SENDER_0219"
+      filePath: "cpi/iflows/EDI_850_ROUTE_-_SEDI_SFTP_X12_850_SENDER_0219/EDI_850_ROUTE_-_SEDI_SFTP_X12_850_SENDER_0219.zip"
+      apiServiceKeyCredentialsId: "cpi-api-key"
+
+  Deploy:
+    integrationArtifactDeploy:
+      integrationFlowId: "EDI_850_ROUTE_-_SEDI_SFTP_X12_850_SENDER_0219"
+      apiServiceKeyCredentialsId: "cpi-api-key"
