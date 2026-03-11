@@ -3,6 +3,7 @@ general:
 
 stages:
   Upload:
+    enabled: true
     integrationArtifactUpload:
       packageId: "TestPackage"
       integrationFlowId: "EDI_850_ROUTE_-_SEDI_SFTP_X12_850_SENDER_0219"
@@ -11,6 +12,13 @@ stages:
       apiServiceKeyCredentialsId: "cpi-api-key"
 
   Deploy:
+    enabled: true
     integrationArtifactDeploy:
       integrationFlowId: "EDI_850_ROUTE_-_SEDI_SFTP_X12_850_SENDER_0219"
       apiServiceKeyCredentialsId: "cpi-api-key"
+
+  "Integration Test":
+    enabled: false
+
+  "Integration Flow Result":
+    enabled: false
